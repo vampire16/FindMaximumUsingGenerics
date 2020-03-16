@@ -3,28 +3,8 @@ public class Maximum {
         System.out.println("Welcome");
     }
 
-    public static Integer findMaxInt(Integer number1, Integer number2, Integer number3) {
-        Integer maximum = number1;
-
-        if (number2.compareTo(maximum)>0)
-            maximum = number2;
-        if (number3.compareTo(maximum)>0)
-            maximum = number3;
-        return maximum;
-    }
-
-    public static Float findMaxFloat(Float number1, Float number2, Float number3) {
-        Float maximum = number1;
-
-        if (number2.compareTo(maximum)>0)
-            maximum = number2;
-        if (number3.compareTo(maximum)>0)
-            maximum = number3;
-        return maximum;
-    }
-
-    public static String findMaxString(String first, String second, String third) {
-        String maximum = first;
+    public static <E extends Comparable> E findMax(E first, E second, E third) {
+        E maximum = first;
 
         if (second.compareTo(maximum)>0)
             maximum = second;
